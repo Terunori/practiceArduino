@@ -4,8 +4,8 @@
 !.gitignore
 
 # except arduino script
-!*.xx
+!*.ino
 # except script in lower folders
 !/*/
 /*/*
-!/*/*/.xx
+!/*/*/xino
