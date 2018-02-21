@@ -1,0 +1,11 @@
+# gitignore
+# ignore all
+*
+!.gitignore
+
+# except arduino script
+!*.xx
+# except script in lower folders
+!/*/
+/*/*
+!/*/*/.xx
