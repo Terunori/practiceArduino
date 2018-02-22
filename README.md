@@ -5,6 +5,9 @@ This README would normally document whatever steps are necessary to get your app
 ### What is this repository for? ###
 
 * Quick summary
+理科会Arduino研修
+2018/02/22~
+講師: 本橋くん
 * Version
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 

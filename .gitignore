@@ -1,11 +1,18 @@
-# gitignore
+# $HOME/.gitignore
 # ignore all
-*
-!.gitignore
+/*
+!/.gitignore
 
 # except arduino script
-!*.ino
+!/*.ino
+!/*.md
 # except script in lower folders
 !/*/
 /*/*
-!/*/*/xino
+!/*/*.ino
+!/*/*.md
+# except script in second lower folders
+!/*/*/
+/*/*/*
+!/*/*/*.ino
+!/*/*/*.md
