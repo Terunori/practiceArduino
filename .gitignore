@@ -6,13 +6,17 @@
 # except arduino script
 !/*.ino
 !/*.md
+
 # except script in lower folders
 !/*/
 /*/*
 !/*/*.ino
 !/*/*.md
+
 # except script in second lower folders
 !/*/*/
 /*/*/*
 !/*/*/*.ino
 !/*/*/*.md
+
+### that's all ###
