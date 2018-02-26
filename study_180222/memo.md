@@ -41,6 +41,7 @@
 
 - センサ値を見たい: センサモニタの代わり
 - e-gadgetと同じ1024段階
+- println は print "hogehoge\n"
 
 ## 変数の型
 
