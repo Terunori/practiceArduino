@@ -1,3 +1,4 @@
+/* Cds光センサへの入力（光強度）に応じてサーボを回転 */
 #include <MsTimer2.h>
 #include <Servo.h>
 

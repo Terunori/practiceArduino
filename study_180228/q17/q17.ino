@@ -25,7 +25,7 @@ void loop()
     lightVal = analogRead(anaPin);
     val = lightVal / 4; // 光度(256段階)
     analogWrite(pwmPin,val);
-    if (val >= 100)
+    if (val <= 100)
     {
         digitalWrite(outPin, HIGH);
     }
