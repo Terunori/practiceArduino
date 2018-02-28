@@ -33,6 +33,7 @@ void loop()
         // 厳密には気温によって異なる
         Distance = Duration / 2;
         Distance = Distance * 340 * 100 / 1000000;
+        // ほんとはprint系はタイマ割り込みすべき（delayはすべての処理を遅らせてしまう）
         Serial.print(Duration);
         Serial.print(" us, ");
         Serial.print(Distance);

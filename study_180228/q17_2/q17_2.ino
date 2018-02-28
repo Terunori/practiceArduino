@@ -4,6 +4,8 @@
 int anaPin = 1;
 int outPin = 13;
 int lightVal = 0;
+
+//volatile: 2箇所以上で使う変数
 volatile int val = 0;
 volatile int duty = 0;
 
@@ -14,7 +16,7 @@ void timerFire()
     //100msごとに呼び出し
     Serial.print("val = ");
     Serial.print(val);
-    Serial.print(" duty = ");
+    Serial.print("\tduty = ");
     Serial.println(duty);
 }
 
@@ -30,8 +32,11 @@ void setup()
 void loop()
 {
     lightVal = analogRead(anaPin);
-    val = lightVal / 4; // 光度(256段階)
-    duty = val * 180 / 256; // ??
+    val = lightVal / 4; // 光度(256段階) <- 1024 / 256 = 4
+    // そのままだとval*180でオーバーフロー(2byte, 値の範囲は-32768から32767)する
+    // valを使えば計算値は高々256*180=46080なので「unsign int duty」で定義（非負整数のみ使用）、以下の式を使うことでも回避可能
+    // duty = val * 180 / 256;
+    duty = (int)((float)lightVal * 180 / 1024);
     myservo.write(duty);
     if (val >= 100)
     {
