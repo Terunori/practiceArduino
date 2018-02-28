@@ -34,7 +34,7 @@ void loop()
     lightVal = analogRead(anaPin);
     val = lightVal / 4; // 光度(256段階) <- 1024 / 256 = 4
     // そのままだとval*180でオーバーフロー(2byte, 値の範囲は-32768から32767)する
-    // valを使えば計算値は高々256*180=46080なので「unsign int duty」で定義（非負整数のみ使用）、以下の式を使うことでも回避可能
+    // valを使えば計算値は高々256*180=46080なので「unsigned int duty」で定義（非負整数のみ使用）、以下の式を使うことでも回避可能
     // duty = val * 180 / 256;
     duty = (int)((float)lightVal * 180 / 1024);
     myservo.write(duty);
